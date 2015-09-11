@@ -1,0 +1,23 @@
+{
+  "name": "pizzadash",
+  "version": "1.0.0",
+  "description": "Order Pizza with Amazon Dash Button",
+  "main": "app.js",
+  "dependencies": {
+    "arp-listener": "0.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bhberson@github.com/bhberson/pizzadash.git"
+  },
+  "author": "Brody Berson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhberson/pizzadash/issues"
+  },
+  "homepage": "https://github.com/bhberson/pizzadash#readme"
+}
