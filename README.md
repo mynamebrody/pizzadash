@@ -2,7 +2,9 @@
 PizzaDash
 ====
 This is a node.js application that "hacks" your Amazon Dash Button to order you a Domino's pizza!
-I am using a few npm modules to listen for the button press and place the order: riaevangelist's ` pizzapi ` hortinstein's ` node-dash-button ` [Node-Dash-Button](https://github.com/hortinstein/node-dash-button). [See the pretty PizzaPI documentation](http://riaevangelist.github.io/node-dominos-pizza-api/)
+I was inspired by [this article by Edward Bensen](https://medium.com/@edwardbenson/how-i-hacked-amazon-s-5-wifi-button-to-track-baby-data-794214b0bdd8).
+I am using a few npm modules to listen for the button press and place the order: [RIAEvangelist](https://github.com/RIAEvangelist)'s [dominos](https://github.com/RIAEvangelist/node-dominos-pizza-api) [hortinstein](https://github.com/hortinstein)'s [Node-Dash-Button](https://github.com/hortinstein/node-dash-button).
+One idea would be to run this via a local server such as a Raspberry Pi and have on demand pizza ordering whenever you just need a pizza!
 
 Contributing
 ====
@@ -23,11 +25,18 @@ Run
 ====
 1. Find Closest Store
 2. Find Dash Button
-3. Edit the `app.js` file and edit your customer, store, and default order
-4. Run ` node app.js ` press your Dash Button that you have set up and BAM (actual ordering coming soon)
+3. Edit the `app.js` file.
+- Add your store from step 1
+- Edit your address and personal/customer information
+- Edit your order using menu from step 1
+- Add credit card information
+- Add your Amazon Dash Button's address from step 2 
+4. Run ` sudo node app.js ` press your Dash Button that you have set up and BAM pizza will be coming soon!
 
 #### To do
-- Make Actual Order be able to be placed (payments)
+- Smooth things out and make a setup script for first time users that will create an `app.js` file automatically for them
+- Coupon support
+- Other ideas?
 
 #### License
 
