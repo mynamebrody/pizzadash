@@ -29,6 +29,7 @@ Hortinstein has an example of how to [Find a Dash Button](https://github.com/hor
 
 Run
 ====
+1. run ` npm install ` the first time so all npm requirements will be installed.
 1. Find Closest Store
 2. Find Dash Button
 3. Edit the `app.js` file.
@@ -36,7 +37,7 @@ Run
   - Edit your address and personal/customer information
   - Edit your order using menu from step 1
   - Add credit card information
-  - Add your Amazon Dash Button's address from step 2
+  - Add your Amazon Dash Button's address from step 2p
 4. Run ` sudo node app.js ` press your Dash Button that you have set up and BAM pizza will be coming soon!
 
 #### To do
