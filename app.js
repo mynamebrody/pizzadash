@@ -63,7 +63,7 @@ cardInfo.PostalCode = '90210'; // Billing Zipcode
 order.Payments.push(cardInfo);
 
 
-var dash = dash_button("XX:02:dc:85:b8:3c"); //address from running `sudo node node_modules/node-dash-button/bin/findbutton`
+var dash = dash_button("XX:02:dc:85:b8:3c"); //MAC Address
 dash.on("detected", function (){
     console.log("Dash Button Found");
 	//Validate, price, and place order!

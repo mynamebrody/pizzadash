@@ -9,7 +9,7 @@ One idea would be to run this via a local server such as a Raspberry Pi and have
 
 Requirements
 ====
-pcap  
+`pcap`
 If you are running ubuntu you will need to run ` sudo apt-get install libpcap0.8-dev `
 
 Contributing
@@ -19,26 +19,20 @@ Contributing
 2. Do cool stuff.
 3. Submit a PR.
 
-Find Closest Store
+Setup/Run
 ====
-Simpley run ` node findStore.js ` and input your 5 digit zipcode, this will return closest store info (Store ID) and their menu.
-
-Find Dash Button
-====
-Hortinstein has an example of how to [Find a Dash Button](https://github.com/hortinstein/node-dash-button/blob/master/README.md#find-a-dash)
-
-Run
-====
-1. run ` npm install ` the first time so all npm requirements will be installed.
-1. Find Closest Store
-2. Find Dash Button
-3. Edit the `app.js` file.
-  - Add your store from step 1
+1. Run ` npm install ` the first time so all npm requirements will be installed.
+2. Find Closest Store
+  - Run ` node findStore.js ` and input your 5 digit zipcode, this will return closest store info (Store ID) and their menu.
+3. Find Dash Button
+  - Run ` sudo node node_modules/node-dash-button/bin/findbutton ` and press the button
+4. Edit the `app.js` file.
+  - Add your store from step 2
   - Edit your address and personal/customer information
-  - Edit your order using menu from step 1
+  - Edit your order using menu from step 2
   - Add credit card information
-  - Add your Amazon Dash Button's address from step 2p
-4. Run ` sudo node app.js ` press your Dash Button that you have set up and BAM pizza will be coming soon!
+  - Add your Amazon Dash Button's address from step 3
+5. Run ` sudo node app.js ` press your Dash Button that you have set up and BAM pizza will be coming soon!
 
 #### To do
 - Smooth things out and make a setup script for first time users that will create an `app.js` file automatically for them
