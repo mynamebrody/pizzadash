@@ -7,6 +7,11 @@ I am using a few npm modules to listen for the button press and place the order:
 
 One idea would be to run this via a local server such as a Raspberry Pi and have on demand pizza ordering whenever you just need a pizza!
 
+Requirements
+====
+pcap  
+If you are running ubuntu you will need to run ` sudo apt-get install libpcap0.8-dev `
+
 Contributing
 ====
 
@@ -31,7 +36,7 @@ Run
   - Edit your address and personal/customer information
   - Edit your order using menu from step 1
   - Add credit card information
-  - Add your Amazon Dash Button's address from step 2 
+  - Add your Amazon Dash Button's address from step 2
 4. Run ` sudo node app.js ` press your Dash Button that you have set up and BAM pizza will be coming soon!
 
 #### To do
