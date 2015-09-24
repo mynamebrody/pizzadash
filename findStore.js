@@ -1,4 +1,4 @@
-var pizzapi = require('pizzapi');
+var pizzapi = require('dominos');
 var prompt = require('prompt');
 
 var myStore;

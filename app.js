@@ -1,5 +1,5 @@
 var dash_button = require('node-dash-button');
-var pizzapi = require('pizzapi');
+var pizzapi = require('dominos');
 
 // Setup your Default Store
 // 6371 = Lafayette, CO 80026
