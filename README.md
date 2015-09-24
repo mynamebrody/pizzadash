@@ -32,7 +32,7 @@ Setup/Run
   - Edit your order using menu from step 2
   - Add credit card information
   - Add your Amazon Dash Button's address from step 3
-5. Run ` sudo node app.js ` press your Dash Button that you have set up and BAM pizza will be coming soon!
+5. Run` npm start ` and press your Dash Button that you have set up and BAM pizza will be coming soon!
 
 #### To do
 - Smooth things out and make a setup script for first time users that will create an `app.js` file automatically for them
