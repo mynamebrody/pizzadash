@@ -1,4 +1,4 @@
-![Pizza Dash](http://i.imgur.com/mv1imGZ.jpg?1)
+![Pizza Dash](http://i.imgur.com/DD944Cz.jpg)
 PizzaDash
 ====
 This is a node.js application that "hacks" your Amazon Dash Button to order you a Domino's pizza!
