@@ -39,7 +39,20 @@ order.addItem(
     )
 );
 
-var dash = dash_button("XX:3f:20:33:54:44"); //address from running `node node_modules/node-dash-button/bin/findbutton`
+// Setup your Credit Card Info
+var cardNumber='4100123422343234';
+var cardInfo = new order.PaymentObject();
+cardInfo.Amount = order.Amounts.Customer;
+cardInfo.Number = cardNumber;
+cardInfo.CardType = order.validateCC(cardNumber);
+cardInfo.Expiration = '0115';//  01/15 just the numbers "01/15".replace(/\D/g,'');
+cardInfo.SecurityCode = '777';
+cardInfo.PostalCode = '90210'; // Billing Zipcode
+
+order.Payments.push(cardInfo);
+
+
+var dash = dash_button("XX:02:dc:85:b8:3c"); //address from running `sudo node node_modules/node-dash-button/bin/findbutton`
 dash.on("detected", function (){
     console.log("Dash Button Found");
 	//Validate, price, and place order!
