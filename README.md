@@ -1,15 +1,15 @@
 ![Pizza Dash](http://i.imgur.com/DD944Cz.jpg)
 PizzaDash
 ====
-This is a node.js application that "hacks" your Amazon Dash Button to order you a Domino's pizza!
+This is a node.js application that "hacks" your [Amazon Dash Button](http://www.amazon.com/dashbutton) to order you a [Domino](https://www.dominos.com/)'s pizza!
 I was inspired by [this article by Edward Bensen](https://medium.com/@edwardbenson/how-i-hacked-amazon-s-5-wifi-button-to-track-baby-data-794214b0bdd8).
 I am using a few npm modules to listen for the button press and place the order: [RIAEvangelist](https://github.com/RIAEvangelist)'s [dominos](https://github.com/RIAEvangelist/node-dominos-pizza-api) and also [hortinstein](https://github.com/hortinstein)'s [Node-Dash-Button](https://github.com/hortinstein/node-dash-button).
 
-One idea would be to run this via a local server such as a Raspberry Pi and have on demand pizza ordering whenever you just need a pizza!
+One idea would be to have this [always running](#always-running) via a local server such as a Raspberry Pi and have on demand pizza ordering whenever you just need a pizza!
 
 Requirements
 ====
-`pcap`
+__pcap__
 If you are running ubuntu you will need to run ` sudo apt-get install libpcap0.8-dev `
 
 Contributing
@@ -34,7 +34,12 @@ Setup/Run
   - Add your Amazon Dash Button's address from step 3
 5. Run` npm start ` and press your Dash Button that you have set up and BAM pizza will be coming soon!
 
-#### To do
+Always Running
+----
+This [article](http://weworkweplay.com/play/raspberry-pi-nodejs/) shows you what you can do with a [Raspberry Pi](https://www.raspberrypi.org/) to set this up as a node server running all the time on your network and it literally would be the press of a button *whenever* you wanted!
+
+To do
+----
 - Smooth things out and make a setup script for first time users that will create an `app.js` file automatically for them
 - Coupon support
 - Other ideas?
