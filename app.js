@@ -10,19 +10,30 @@ var myStore = new pizzapi.Store(
     }
 );
 
-// Dummy Customer
-var thePresident = new pizzapi.Customer(
+// Setup your Address
+var myAddress = new Address(
+        {
+            Street: '900 Clark Ave',
+            City: 'St. Louis',
+            Region: 'MO',
+            PostalCode: 63102
+        }
+    );
+
+// Setup your Customer
+var myCustomer = new pizzapi.Customer(
     {
         firstName: 'Barack',
         lastName: 'Obama',
-        address: '700 Pennsylvania Avenue, Washington, DC',
+        address: myAddress,
+        phone: '1238675309',
         email: 'barack@whitehouse.gov'
     }
 );
 
 var order = new pizzapi.Order(
     {
-        customer: thePresident,
+        customer: myCustomer,
         storeID: myStore.ID
     }
 );
