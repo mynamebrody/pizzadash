@@ -11,7 +11,7 @@ var myStore = new pizzapi.Store(
 );
 
 // Setup your Address
-var myAddress = new Address(
+var myAddress = new pizzapi.Address(
         {
             Street: '900 Clark Ave',
             City: 'St. Louis',
