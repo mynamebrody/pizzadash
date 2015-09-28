@@ -6,7 +6,7 @@ var pizzapi = require('dominos');
 // Run `node findStore.js` and enter Zip Code
 var myStore = new pizzapi.Store(
     {
-        ID: 6371
+        ID: '6371'
     }
 );
 
@@ -16,7 +16,7 @@ var myAddress = new pizzapi.Address(
             Street: '900 Clark Ave',
             City: 'St. Louis',
             Region: 'MO',
-            PostalCode: 63102
+            PostalCode: '63102'
         }
     );
 
@@ -51,7 +51,7 @@ order.addItem(
 );
 
 // Setup your Credit Card Info
-var cardNumber='4100123422343234';
+var cardNumber='4100123422343234';// Valid but fake credit card
 var cardInfo = new order.PaymentObject();
 cardInfo.Amount = order.Amounts.Customer;
 cardInfo.Number = cardNumber;
@@ -74,12 +74,12 @@ dash.on("detected", function (){
 	);
 	order.price(
 	    function(result) {
-            console.log("Price is", result.result.Order.Amounts, "\nEstimated Wait Time",result.result.Order.EstimatedWaitMinutes, "minutes")
+            console.log("Order is Priced");
 	    }
 	);
-	//Still need to setup payment information
 	order.place(
 	    function(result) {
+            console.log("Price is", result.result.Order.Amounts, "\nEstimated Wait Time",result.result.Order.EstimatedWaitMinutes, "minutes");
 	        console.log("Order placed!");
 	    }
 	);
