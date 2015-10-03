@@ -1,3 +1,4 @@
+require('dotenv').load();
 var dash_button = require('node-dash-button');
 var pizzapi = require('dominos');
 
@@ -63,7 +64,7 @@ cardInfo.PostalCode = '90210'; // Billing Zipcode
 order.Payments.push(cardInfo);
 
 
-var dash = dash_button("XX:02:dc:85:b8:3c"); //MAC Address
+var dash = dash_button(process.env.DASH_MAC_ADDRESS);
 dash.on("detected", function (){
     console.log("Dash Button Found");
 	//Validate, price, and place order!
