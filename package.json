@@ -6,6 +6,7 @@
   "dependencies": {
     "arp-listener": "0.0.0",
     "dominos": "^1.0.5",
+    "dotenv": "^1.2.0",
     "i": "^0.3.3",
     "node-dash-button": "^0.1.1",
     "prompt": "^0.2.14"
@@ -41,7 +42,8 @@
       "name": "Brandon Miller",
       "email": "brandon@diginow.it",
       "url": "http://www.diginow.it"
-    }],
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bhberson/pizzadash/issues"
