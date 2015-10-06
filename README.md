@@ -1,6 +1,8 @@
 ![Pizza Dash](http://i.imgur.com/DD944Cz.jpg)
 PizzaDash
 ====
+
+[![Join the chat at https://gitter.im/bhberson/pizzadash](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bhberson/pizzadash?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 This is a node.js application that "hacks" your [Amazon Dash Button](http://www.amazon.com/dashbutton) to order you a [Domino](https://www.dominos.com/)'s pizza!
 I was inspired by [this article by Edward Bensen](https://medium.com/@edwardbenson/how-i-hacked-amazon-s-5-wifi-button-to-track-baby-data-794214b0bdd8).
 I am using a few npm modules to listen for the button press and place the order: [RIAEvangelist](https://github.com/RIAEvangelist)'s [dominos](https://github.com/RIAEvangelist/node-dominos-pizza-api) and also [hortinstein](https://github.com/hortinstein)'s [Node-Dash-Button](https://github.com/hortinstein/node-dash-button).
