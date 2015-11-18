@@ -9,7 +9,7 @@ I am using a few npm modules to listen for the button press and place the order:
 
 One idea would be to have this [always running](#always-running) via a local server such as a Raspberry Pi and have on demand pizza ordering whenever you just need a pizza!
 
-I wrote a blog post about my experience here on [Medium](medium.com/@brody_berson/hacking-amazon-s-5-dash-button-to-order-domino-s-pizza-9d19c9d04646)!
+I wrote a blog post about my experience here on [Medium](https://medium.com/@brody_berson/hacking-amazon-s-5-dash-button-to-order-domino-s-pizza-9d19c9d04646)!
 
 Requirements
 ====
