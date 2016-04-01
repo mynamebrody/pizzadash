@@ -40,6 +40,12 @@ Setup/Run
   - You can add as much personal information from Step 4 into this file as you want if it makes you more comfortable, just would require some logic changes in the ` app.js ` file.
 6. Run` npm start ` and press your Dash Button that you have set up and BAM pizza will be coming soon!
 
+Issues
+====
+If you run into any issues with Socket Watcher please try this: Looks like socketwatcher was using the legacy "node" command instead of nodejs. It is solved on ubuntu by installing nodejs-legacy that clears up those conflicts.
+`sudo apt-get install nodejs-legacy`
+
+
 Always Running
 ----
 This [article](http://weworkweplay.com/play/raspberry-pi-nodejs/) shows you what you can do with a [Raspberry Pi](https://www.raspberrypi.org/) to set this up as a node server running all the time on your network and it literally would be the press of a button *whenever* you wanted!
