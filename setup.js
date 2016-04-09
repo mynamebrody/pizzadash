@@ -1,11 +1,11 @@
-require('dotenv').load();
 var fs          = require('fs'),
     path        = require('path'),
     readline    = require('readline'),
     colors      = require('colors'),
     pizzapi     = require('dominos'),
     dash_button = require('node-dash-button'),
-    util        = require('util');
+    util        = require('util'),
+    order       = require('./order.json');
 
 
 
@@ -279,7 +279,7 @@ function findStores(address, closest, menu, fullMenu){
     }
     console.log('Looking for stores near '+address.info+'...');
     rl.prompt();
-    var nearAddress=new pizzapi.Address(process.env.ADDRESS);
+    var nearAddress=new pizzapi.Address(order["order"]["address"]);
 
     if(!nearAddress.PostalCode){
         console.log('Not a valid address'.red+' you must at least provide a zipcode');
