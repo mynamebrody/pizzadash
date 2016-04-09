@@ -6,7 +6,6 @@
   "dependencies": {
     "arp-listener": "0.0.0",
     "dominos": "^1.0.5",
-    "dotenv": "^1.2.0",
     "i": "^0.3.3",
     "node-dash-button": "^0.1.1",
     "prompt": "^0.2.14"
@@ -14,7 +13,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "sudo node app.js"
+    "start": "sudo nodejs app.js"
   },
   "repository": {
     "type": "git",
