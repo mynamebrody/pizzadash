@@ -4,7 +4,7 @@
 		<link type="text/css" rel="stylesheet" href="personalinfoStylesheet.css"/>
 		<title>Pizza Order Form</title>
 	</head>
-	<form action="./customer" method="post"> <!--Put in whatever the form handler is-->
+	<form action="./customer" method="POST"> <!--Put in whatever the form handler is-->
 		<fieldset>
 			<legend>Personal Information: </legend>
 			First Name:<br>
@@ -16,7 +16,7 @@
 			City:<br>
 			<input type="text" name="city" value=""><br>
 			State:<br>
-			<select>
+			<select name="state">
 				<option value="AL">Alabama</option>
 				<option value="AK">Alaska</option>
 				<option value="AZ">Arizona</option>
@@ -69,6 +69,8 @@
 				<option value="WI">Wisconsin</option>
 				<option value="WY">Wyoming</option>
 			</select><br>
+			Zip Code:<br>
+			<input type="text" name="zip" value=""><br>
 			Email:<br>
 			<input type="text" name="email" value=""><br>
 			Phone Number (only enter numbers, Ex: 1-555-555-5555 = 15555555555 ):<br>
