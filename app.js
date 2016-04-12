@@ -1,7 +1,28 @@
 var dash_button = require('node-dash-button');
 var pizzapi = require('dominos');
 var orderconfig = require('./order.json');
+var server= require('./server.js');
+var express= require("express");
+var bodyParser=require("body-parser");
+var app = express();
 
+//###################################################
+//Website Run Control
+
+app.use(bodyParser());
+app.use("/", server.router);
+
+app.listen(3000,function(){
+  console.log("Live at Port 3000");
+});
+
+setTimeout(function(){console.log(server.session());},20000);
+
+
+//###################################################
+
+
+/*
 //Input order from json
 var order = new pizzapi.Order(
   orderconfig["order"]
@@ -49,3 +70,4 @@ dash.on("detected", function (){
 	    }
 	);
 });
+*/
