@@ -16,13 +16,13 @@ app.listen(3000,function(){
   console.log("Live at Port 3000");
 });
 
-setTimeout(function(){console.log(server.session());},20000);
+console.log("brown");
 
 
 //###################################################
 
 
-/*
+
 //Input order from json
 var order = new pizzapi.Order(
   orderconfig["order"]
@@ -70,4 +70,3 @@ dash.on("detected", function (){
 	    }
 	);
 });
-*/
