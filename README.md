@@ -30,15 +30,13 @@ Setup/Run
   - Run ` node findStore.js ` and input your 5 digit zipcode, this will return closest store info (Store ID) and their menu.
 3. Find Dash Button
   - Run ` sudo node node_modules/node-dash-button/bin/findbutton ` and press the button
-4. Edit the ` app.js ` file.
+4. Create your ` order.json ` file by copying ` exampleorder.json `
   - Add your store from step 2
   - Edit your address and personal/customer information
   - Edit your order using menu from step 2
   - Add credit card information
-5. Create your ` .env ` environmental variable file
   - Add your Amazon Dash Button's address from step 3
-  - You can add as much personal information from Step 4 into this file as you want if it makes you more comfortable, just would require some logic changes in the ` app.js ` file.
-6. Run` npm start ` and press your Dash Button that you have set up and BAM pizza will be coming soon!
+5. Run` npm start ` and press your Dash Button that you have set up and BAM pizza will be coming soon!
 
 Issues
 ====
@@ -52,5 +50,4 @@ This [article](http://weworkweplay.com/play/raspberry-pi-nodejs/) shows you what
 
 To do
 ----
-- Smooth things out and make a setup script for first time users that will create an ` .env ` file automatically for them
 - Other ideas?

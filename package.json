@@ -5,7 +5,6 @@
   "main": "app.js",
   "dependencies": {
     "dominos": "^2.0.1",
-    "dotenv": "^2.0.0",
     "node-dash-button": "^0.3.0",
     "prompt": "^1.0.0"
   },
@@ -40,6 +39,11 @@
       "name": "Brandon Miller",
       "email": "brandon@diginow.it",
       "url": "http://www.diginow.it"
+    },
+    {
+      "name": "Joseph Iaquinto",
+      "email": "iaquinto.joe@gmail.com",
+      "url": "http://joeiaquinto.github.io/"
     }
   ],
   "license": "MIT",
