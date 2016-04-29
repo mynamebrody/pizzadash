@@ -4,11 +4,9 @@
   "description": "Order Pizza with Amazon Dash Button",
   "main": "app.js",
   "dependencies": {
-    "arp-listener": "0.0.0",
-    "dominos": "^1.0.5",
-    "i": "^0.3.3",
-    "node-dash-button": "^0.1.1",
-    "prompt": "^0.2.14"
+    "dominos": "^2.0.1",
+    "node-dash-button": "^0.3.0",
+    "prompt": "^1.0.0"
   },
   "devDependencies": {},
   "scripts": {
