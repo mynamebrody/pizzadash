@@ -48,6 +48,9 @@ Always Running
 ----
 This [article](http://weworkweplay.com/play/raspberry-pi-nodejs/) shows you what you can do with a [Raspberry Pi](https://www.raspberrypi.org/) to set this up as a node server running all the time on your network and it literally would be the press of a button *whenever* you wanted!
 
+Or you can view this [Gist](https://gist.github.com/bhberson/7a2847888596e67fd69b) to view how to create an AWS Lambda function if you own an Amazon AWS IoT Button. They basically handle the "always on" use case for us!
+
 To do
 ----
+- Create a Web Interface to assist in creating orders easily.
 - Other ideas?
