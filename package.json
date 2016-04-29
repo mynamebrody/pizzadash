@@ -5,11 +5,11 @@
   "main": "app.js",
   "dependencies": {
     "arp-listener": "0.0.0",
-    "dominos": "^1.0.5",
-    "dotenv": "^1.2.0",
+    "dominos": "^2.0.1",
+    "dotenv": "^2.0.0",
     "i": "^0.3.3",
-    "node-dash-button": "^0.1.1",
-    "prompt": "^0.2.14"
+    "node-dash-button": "^0.3.0",
+    "prompt": "^1.0.0"
   },
   "devDependencies": {},
   "scripts": {
