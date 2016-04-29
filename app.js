@@ -1,70 +1,34 @@
-require('dotenv').load();
 var dash_button = require('node-dash-button');
 var pizzapi = require('dominos');
+var orderconfig = require('./order.json');
 
-// Setup your Default Store
-// 6371 = Lafayette, CO 80026
-// Run `node findStore.js` and enter Zip Code
-var myStore = new pizzapi.Store(
-    {
-        ID: '6371'
-    }
-);
-
-// Setup your Address
-var myAddress = new pizzapi.Address(
-        {
-            Street: '900 Clark Ave',
-            City: 'St. Louis',
-            Region: 'MO',
-            PostalCode: '63102'
-        }
-    );
-
-// Setup your Customer
-var myCustomer = new pizzapi.Customer(
-    {
-        firstName: 'Barack',
-        lastName: 'Obama',
-        address: myAddress,
-        phone: '1238675309',
-        email: 'barack@whitehouse.gov'
-    }
-);
-
+//Input order from json
 var order = new pizzapi.Order(
-    {
-        customer: myCustomer,
-        storeID: myStore.ID
-    }
+  orderconfig["order"]
 );
-
-// Setup your Default Order
-// 14SCREEN = Large (14") Hand Tossed Pizza Whole: Cheese
-order.addItem(
+//Add items to order
+var items = orderconfig["items"];
+for (var i=0; i<items.length; i++) {
+  order.addItem(
     new pizzapi.Item(
-        {
-            code: '14SCREEN',
-            options: {},
-            quantity: 1
-        }
+      items[i]
     )
-);
+  );
+}
 
 // Setup your Credit Card Info
-var cardNumber='4100123422343234';// Valid but fake credit card
 var cardInfo = new order.PaymentObject();
 cardInfo.Amount = order.Amounts.Customer;
-cardInfo.Number = cardNumber;
-cardInfo.CardType = order.validateCC(cardNumber);
-cardInfo.Expiration = '0115';//  01/15 just the numbers "01/15".replace(/\D/g,'');
-cardInfo.SecurityCode = '777';
-cardInfo.PostalCode = '90210'; // Billing Zipcode
+cardInfo.Number = orderconfig["cardNum"];
+cardInfo.CardType = order.validateCC(orderconfig["cardNum"]);
+cardInfo.Expiration = orderconfig["cardExp"];//  01/15 just the numbers "01/15".replace(/\D/g,'');
+cardInfo.SecurityCode = orderconfig["cardSec"];
+cardInfo.PostalCode = orderconfig["cardPost"]; // Billing Zipcode
 
 order.Payments.push(cardInfo);
 
-
-var dash = dash_button(process.env.DASH_MAC_ADDRESS);
+//TODO: if no mac address, find one and save it
+var dash = dash_button(orderconfig["dashMacAddress"]);
 dash.on("detected", function (){
     console.log("Dash Button Found");
 	//Validate, price, and place order!
