@@ -51,22 +51,26 @@ order.Payments.push(cardInfo);
 //TODO: if no mac address, find one and save it
 var dash = dash_button(orderconfig["dashMacAddress"]);
 dash.on("detected", function (){
-    console.log("Dash Button Found");
-	//Validate, price, and place order!
-	order.validate(
-	    function(result) {
-	        console.log("Order is Validated");
-	    }
-	);
-	order.price(
-	    function(result) {
-            console.log("Order is Priced");
-	    }
-	);
-	order.place(
-	    function(result) {
-            console.log("Price is", result.result.Order.Amounts, "\nEstimated Wait Time",result.result.Order.EstimatedWaitMinutes, "minutes");
-	        console.log("Order placed!");
-	    }
-	);
+	try{
+	    console.log("Dash Button Found");
+		//Validate, price, and place order!
+		order.validate(
+		    function(result) {
+		        console.log("Order is Validated");
+		    }
+		);
+		order.price(
+		    function(result) {
+	            console.log("Order is Priced");
+		    }
+		);
+		order.place(
+		    function(result) {
+	            console.log("Price is", result.result.Order.Amounts, "\nEstimated Wait Time",result.result.Order.EstimatedWaitMinutes, "minutes");
+		        console.log("Order placed!");
+		    }
+		);
+	} catch(err) {
+		console.log("Button Not Found");
+	}
 });
