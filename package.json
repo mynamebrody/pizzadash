@@ -9,7 +9,7 @@
     "dominos": "^1.0.5",
     "express": "^4.13.4",
     "i": "^0.3.4",
-    "node-dash-button": "^0.1.5",
+    "node-dash-button": "^0.4.0",
     "prompt": "^0.2.14"
   },
   "devDependencies": {},
