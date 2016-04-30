@@ -1,6 +1,6 @@
 var dash_button = require('node-dash-button');
 var pizzapi = require('dominos');
-var orderconfig = require('./order.json');
+var orderconfig = require('./exampleorder.json');
 var server= require('./server.js');
 var express= require("express");
 var bodyParser=require("body-parser");
