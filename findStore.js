@@ -25,7 +25,7 @@ prompt.get(['zip'], function (err, result) {
                 }
             );
             //Get Menu for first store
-            myStore.getMenu(
+            myStore.getFriendlyNames(
                 function(storeData) {
                     console.log('\n\n##################\nClosest Store Menu\n##################\n\n',storeData.result);
                 }
