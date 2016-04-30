@@ -4,8 +4,8 @@
   "description": "Order Pizza with Amazon Dash Button",
   "main": "app.js",
   "dependencies": {
+    "node-dash-button": "^0.4.0",
     "dominos": "^2.0.1",
-    "node-dash-button": "^0.3.0",
     "prompt": "^1.0.0"
   },
   "devDependencies": {},

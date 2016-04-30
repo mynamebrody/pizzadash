@@ -2,7 +2,10 @@
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
 
+**/.DS_Store
+
 # ignore the order files,
 *.json
 # except exampleorder.json
 !exampleorder.json
+!package.json
