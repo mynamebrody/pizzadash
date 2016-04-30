@@ -1,27 +1,6 @@
 var dash_button = require('node-dash-button');
 var pizzapi = require('dominos');
-var orderconfig = require('./exampleorder.json');
-var server= require('./server.js');
-var express= require("express");
-var bodyParser=require("body-parser");
-var app = express();
-
-//###################################################
-//Website Run Control
-
-app.use(bodyParser());
-app.use("/", server.router);
-
-app.listen(3000,function(){
-  console.log("Live at Port 3000");
-});
-
-console.log("brown");
-
-
-//###################################################
-
-
+var orderconfig = require('./order.json');
 
 //Input order from json
 var order = new pizzapi.Order(
@@ -51,26 +30,22 @@ order.Payments.push(cardInfo);
 //TODO: if no mac address, find one and save it
 var dash = dash_button(orderconfig["dashMacAddress"]);
 dash.on("detected", function (){
-	try{
-	    console.log("Dash Button Found");
-		//Validate, price, and place order!
-		order.validate(
-		    function(result) {
-		        console.log("Order is Validated");
-		    }
-		);
-		order.price(
-		    function(result) {
-	            console.log("Order is Priced");
-		    }
-		);
-		order.place(
-		    function(result) {
-	            console.log("Price is", result.result.Order.Amounts, "\nEstimated Wait Time",result.result.Order.EstimatedWaitMinutes, "minutes");
-		        console.log("Order placed!");
-		    }
-		);
-	} catch(err) {
-		console.log("Button Not Found");
-	}
+    console.log("Dash Button Found");
+	//Validate, price, and place order!
+	order.validate(
+	    function(result) {
+	        console.log("Order is Validated");
+	    }
+	);
+	order.price(
+	    function(result) {
+            console.log("Order is Priced");
+	    }
+	);
+	order.place(
+	    function(result) {
+            console.log("Price is", result.result.Order.Amounts, "\nEstimated Wait Time",result.result.Order.EstimatedWaitMinutes, "minutes");
+	        console.log("Order placed!");
+	    }
+	);
 });
