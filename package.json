@@ -15,7 +15,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "sudo nodejs app.js"
+    "start": "sudo node app.js"
   },
   "repository": {
     "type": "git",
@@ -43,6 +43,11 @@
       "name": "Brandon Miller",
       "email": "brandon@diginow.it",
       "url": "http://www.diginow.it"
+    },
+    {
+      "name": "Joseph Iaquinto",
+      "email": "iaquinto.joe@gmail.com",
+      "url": "http://joeiaquinto.github.io/"
     }
   ],
   "license": "MIT",
